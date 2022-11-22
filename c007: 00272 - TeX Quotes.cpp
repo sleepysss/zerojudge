@@ -3,6 +3,9 @@
 
 using namespace std;
 
+//整理完再印是無法的,因為裡面有引號
+
+
 int main()
 {
     bool s=false;
@@ -27,8 +30,7 @@ int main()
             else
                 cout<<s1[i];
         }
-        cout<<endl;
-        
+        cout<<endl; 
     }
 
     return 0;
