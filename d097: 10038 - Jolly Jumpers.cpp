@@ -127,3 +127,56 @@ int main()
 //開一個長度為 n 的陣列，記錄前後差的數值是否出現過
 //再從 1~n 之間，開始搜索哪一個未出現過，只要有找到就不是 Jolly Jumpers
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    vector<int> v1;
+    bool flag;
+    int num,diff,count;
+    while(cin>>count)
+    {
+        v1.clear();
+        flag=1;
+        int store[count]={0};
+        
+        for(int i=0;i<count;++i)
+        {
+            cin>>num;
+            v1.push_back(num);
+        }
+        
+        //計算各數之間的差
+        for(int i=0;i<v1.size()-1;++i)
+        {
+            diff=abs(v1[i]-v1[i+1]);
+            if(diff>(count-1))
+            {
+                flag=0;
+                break;
+            }
+            store[diff]++;
+        }
+        
+        //看是否每個都有
+        for(int i=1;i<count;++i)
+        {
+            if(store[i]==0||store[i]>1)
+            {
+                flag=0;
+                break;
+            }
+        }
+        
+        if(flag)
+            cout<<"Jolly"<<endl;
+        else
+            cout<<"Not jolly"<<endl;
+    }
+    
+    return 0;
+}
