@@ -26,7 +26,7 @@ int main()
     string s1;
     int num;
     cin>>num;
-    cin.get();
+    cin.get(); //要有這個,不然會少一行(因為num按下去的enter)
     struct store s[26];
     
     for(int i=0;i<26;++i)
