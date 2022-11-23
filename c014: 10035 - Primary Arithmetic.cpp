@@ -15,7 +15,7 @@ int main()
         
         while(num1||num2)
         {
-            x=num1%10;
+            x=num1%10; //num1的尾數
             y=num2%10;
             if((x+y+c)>=10)
             {
