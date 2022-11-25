@@ -16,6 +16,7 @@ int main()
         for(int j=a;j<=b;++j)
         {
             //用binary search看j是否為完全平方數
+            //另解:把之間的數每個開平方後相成，若開平方後相成後還是一樣。就是完全平方數
             l=0;
             r=j;
             while(l<=r)
